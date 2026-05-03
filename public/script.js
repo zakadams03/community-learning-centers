@@ -75,7 +75,7 @@ document.querySelectorAll('#ending .ctr').forEach(c=>{ScrollTrigger.create({trig
 function animC(el,target){const s=+el.textContent||0,dur=target>100?2200:1400,t0=performance.now();
 !function tick(now){const p=Math.min((now-t0)/dur,1),e=1-Math.pow(1-p,3);el.textContent=Math.round(s+(target-s)*e);if(p<1)requestAnimationFrame(tick)}(performance.now())}
 initSearch()});
-);v.addEventListener('play',()=>o.classList.add('hidden'));v.addEventListener('ended',()=>o.classList.remove('hidden'))}
+
 function initSearch(){const inp=document.getElementById('sI'),btn=document.getElementById('sB'),res=document.getElementById('sR'),err=document.getElementById('sE');
 if(!inp||!btn)return;const bt=btn.querySelector('.sbt'),bl=btn.querySelector('.sbl');
 function setL(on){btn.disabled=on;bt.style.display=on?'none':'inline';bl.style.display=on?'flex':'none'}
